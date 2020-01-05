@@ -1,0 +1,77 @@
+  Deadline: 2018/Oct/15, 00:05 am
+
+  This exercise asks you to write a C++ or C program which reads a sic assembly
+  program from stdin and writes the normalized output to stdout.
+
+  ** Note: Reading from stdin and Writing to stdout, not opening files.
+
+  ** Your program should be named exer3.cpp, exer3.cc or exer3.c.
+
+  The program can be compiled and run as follows.
+
+  $ g++ exer3.cpp
+  $ mv a.out my-split                    #  change the name of the executable 
+  $ ./my-split < SAMPLE-input-1          #  redirect stdin from a file
+  ........                               #    the output should be like 
+  ........                               #    the one in SAMPLE-split-1
+  $ cat SAMPLE-input-1 | ./my-split      #  or read stdin from the pipe
+  ........                               #    the output should be like 
+  ........                               #    the one in SAMPLE-split-1
+
+  There are three input files, named 
+      SAMPLE-input-1, SAMPLE-input-2, and SAMPLE-input-3. 
+  Their corresponding output files are 
+      SAMPLE-split-1, SAMPLE-split-2, and SAMPLE-split-3.
+
+  To check your output, you should not just watch the output on the screen.
+  You can redirect the output to a file and check it with ``diff''.
+
+  $ ./my-split < SAMPLE-input-1 > k-1    #  redirect the output to a file
+  $ diff SAMPLE-split-1 k-1              #  use diff to compare the output 
+  $ cat -v k-1                           #  or use 'cat -v' to show the output
+
+  $ cat SAMPLE-input-1 | ./my-split | cat -v   #  or like this 
+
+
+The following description is found in ~/sp-1071/source/sicsim.doc.
+-----------------------------------------------------------------------
+       Bytes  1-8  Label
+                9  Blank
+             10-15 Operation code (or Assembler directive)
+             16-17 Blank
+             18-35 Operand
+             36-66 Comment
+-----------------------------------------------------------------------
+It can be depicted as follows.
+          +----------------------------------------+
+          |          1         2         3         |
+          | 1234567890123456789012345678901234567  |
+          | ======== ======  ==================    |
+          |   1-8    10-15     18-35               |
+          |  label   opcode    operand             |
+          +----------------------------------------+
+And your program should it into 
+
+     The normalized format, characters transformed to uppercase
+          +----------------------------------------+
+          |          1         2         3         |
+          | 1234567890123456789012345678901234567  |
+          | ======== ======  ==================    |
+          |   1-8    10-15     18-                 |
+          |  label   opcode    operand             |
+          +----------------------------------------+
+-----------------------------------------------------------------------
+
+  Beware of the spaces before the label. Such case is not allowed in author's 
+  assembler but is OK in our program.
+-----------------------------
+ k2013   word    2013
+   k73   word      73
+  zero   word       0
+-----------------------------
+
+  Also note the normalized output of such input lines.
+-----------------------------
+eof      byte    c'eof' 
+input    byte    x'f3'  
+-----------------------------

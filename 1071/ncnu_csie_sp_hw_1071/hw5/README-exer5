@@ -1,0 +1,44 @@
+
+  Deadline: 2018/Oct/29, 00:05am
+
+  This exercise, pass 2, completes the assembler.
+
+  The input of this exercise are two files, SYMTAB and INTFILE, 
+  which are the output of the previous exercise.
+
+  The output of this exercise, the object file,  should be printed to 
+  the stdout. 
+
+  Your program should be named exer5.cpp, exer5.cc or exer5.c.
+
+  Assuming you have written exer4.cpp and exer5.cpp, you may test your 
+  programs as follows.
+
+    $ g++ -o pass1 exer4.cpp         # compile pass1
+    $ g++ -o pass2 exer5.cpp         # compile pass2
+    $ cat SAMPLE-split-1 | ./pass1   # run pass1; SYMTAB and INTFILE generated
+    $ ./pass2                        # run pass2; the output is shown on
+    H....                            #    the stdout, that is, the screen
+    T....
+    ....
+
+    $ ./pass2 > DEVF2                # run pass2 again, but this time the
+                                     #  output is redirected to a file
+    $ ./sim                          # run the simulator to test it
+    ....                             # Other DEV?? files must be prepared.
+    $
+
+
+  If you do not have an runnable exer4, you can still test your program.
+
+    $ cp SAMPLE-SYMTAB-1  SYMTAB     # test your pass2 for SAMPLE 1
+    $ cp SAMPLE-INTFILE-1 INTFILE
+    $ ./pass2 
+    ......
+    $
+
+
+  Note: There is no SAMPLE output for this exercise since the object
+        file is not unique and you can just verify your object file
+        with the simulator. (That is, run it!)
+

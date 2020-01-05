@@ -1,0 +1,36 @@
+004000 TRY      START   4000
+004000          LDX     ZERO
+004003          STX     TP
+004006          LDA     K73
+004009          STA     SEED
+00400C AGAIN    LDA     SEED
+00400F          MUL     K129
+004012          STA     SEED
+004015          DIV     K511
+004018          MUL     K511
+00401B          STA     TMP
+00401E          LDA     SEED
+004021          SUB     TMP
+004024          STA     SEED
+004027          LDX     TP
+00402A          STA     TABLE,X
+00402D          LDA     TP
+004030          ADD     THREE
+004033          STA     TP
+004036          COMP    K6000
+004039          JLT     AGAIN
+00403C          RSUB
+00403F TABLE    RESW    2000
+0057AF TP       RESW    1
+0057B2 TMP      RESW    1
+0057B5 SEED     RESW    1
+0057B8 TB1      BYTE    C'Good'
+0057BC TB2      BYTE    X'00FF'
+0057BE TB3      BYTE    X'1E'
+0057BF K6000    WORD    6000
+0057C2 K73      WORD    73
+0057C5 K511     WORD    511
+0057C8 K129     WORD    129
+0057CB ZERO     WORD    0
+0057CE THREE    WORD    3
+0057D1          END     TRY

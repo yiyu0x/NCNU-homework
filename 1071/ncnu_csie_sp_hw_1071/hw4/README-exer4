@@ -1,0 +1,41 @@
+
+  Deadline: 2018/Oct/22, 00:05 am
+
+  The previous exercise just normalizs the input assembly program.
+  Its output is easy to parse for the pass 1.
+
+  This exercise reads the output of the previous program through stdin 
+  and writes the output to two files, INTFILE and SYMTAB.
+  Note: The filenames are in uppercase, exactly as shown above.
+        They are NEITHER "INTFILE.txt" nor "SYMTAB.txt".
+
+  Your program should be named exer4.cpp, exer4.cc or exer4.c.
+  
+  The INTFILE is the intermediate file which format is like the input except
+  the loc is inserted at the beginning of each line.
+  The SYMTAB is the symbol table. Its first line contains the 
+  program name, starting address, and program length where the last two items
+  are written in hexdecimal. Its following lines show the content of 
+  the symbol table. Note the order of symbol in the symtable does not need to
+  follow the order the symbol appeared in the input file.
+
+  For example, assuming that the input assembly is sictest.asm,
+  the scenario is just like:
+
+  $ cat sictest.asm | ./your-split-prog | ./your-pass1
+  
+  Then two files named INTFILE and SYMTAB should be created.
+
+  I have put SAMPLE files in your directory. Check them for format. 
+
+  If you do not have workable splitting program, you still can 
+  test your pass 1 with SAMPLE split files as follows.
+
+  $ cat SAMPLE-split-1 | ./your-pass1
+  $ cat SAMPLE-split-2 | ./your-pass1
+  $ cat SAMPLE-split-3 | ./your-pass1
+
+  NOTE: Your INTFILEs should be the same with the sample intermediate files.
+   But for SYMTAB, only the first line should be the same. Other lines 
+   may be in different order.
+

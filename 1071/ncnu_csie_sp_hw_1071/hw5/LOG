@@ -1,0 +1,34 @@
+SIC SIMULATOR V1.6
+
+COMMAND: S(tart, R(un, E(nter, D(ump, H(count, B(kpt, Q(uit?
+s
+
+COMMAND: S(tart, R(un, E(nter, D(ump, H(count, B(kpt, Q(uit?
+h 0
+
+COMMAND: S(tart, R(un, E(nter, D(ump, H(count, B(kpt, Q(uit?
+r
+ATTEMPT TO READ DEVF3 PAST END OF FILE
+P=002051
+
+COMMAND: S(tart, R(un, E(nter, D(ump, H(count, B(kpt, Q(uit?
+r
+ATTEMPT TO READ DEVF3 PAST END OF FILE
+P=002051
+
+COMMAND: S(tart, R(un, E(nter, D(ump, H(count, B(kpt, Q(uit?
+r
+ATTEMPT TO READ DEVF3 PAST END OF FILE
+P=002051
+
+COMMAND: S(tart, R(un, E(nter, D(ump, H(count, B(kpt, Q(uit?
+r
+ATTEMPT TO READ DEVF3 PAST END OF FILE
+P=002051
+
+COMMAND: S(tart, R(un, E(nter, D(ump, H(count, B(kpt, Q(uit?
+r
+ATTEMPT TO READ DEVF3 PAST END OF FILE
+P=002051
+
+COMMAND: S(tart, R(un, E(nter, D(ump, H(count, B(kpt, Q(ui

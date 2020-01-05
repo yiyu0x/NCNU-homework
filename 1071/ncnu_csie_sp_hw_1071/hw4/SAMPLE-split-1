@@ -1,0 +1,32 @@
+TEST     START   1000
+         JSUB    RDNUM
+         LDA     BUFFER
+         MUL     K2013
+         DIV     K73
+         STA     BUFFER
+         JSUB    WRNUM
+         BYTE    X'FF'
+K2013    WORD    2013
+K73      WORD    73
+ZERO     WORD    0
+BUFFER   RESW    1
+BUFLEN   WORD    3
+RDNUM    LDX     ZERO
+RLOOP    TD      INPUT
+         JEQ     RLOOP
+         RD      INPUT
+         STCH    BUFFER,X
+         TIX     BUFLEN
+         JLT     RLOOP
+         RSUB
+INPUT    BYTE    X'F3'
+WRNUM    LDX     ZERO
+WLOOP    TD      OUTPUT
+         JEQ     WLOOP
+         LDCH    BUFFER,X
+         WD      OUTPUT
+         TIX     BUFLEN
+         JLT     WLOOP
+         RSUB
+OUTPUT   BYTE    X'06'
+         END     TEST
