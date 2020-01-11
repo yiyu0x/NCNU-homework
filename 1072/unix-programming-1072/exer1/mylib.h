@@ -1,0 +1,1 @@
+void transpose(char *s);
