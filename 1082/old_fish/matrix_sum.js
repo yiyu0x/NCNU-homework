@@ -23,16 +23,6 @@ const getColSum = (board, x) => {
             col_sum += y_index + 1
     return col_sum
 }
-const isSafe = (board, row, col, x, y) => {
-
-    //檢查該座標水平方向是否超出要求
-    const row_sum = getRowSum(board, y)
-    if (row_sum > row[y]) return false
-    //檢查該座標垂直方向是否超出要求
-    const col_sum = getColSum(board, x)
-    if (col_sum > col[x]) return false
-    return true
-}
 
 const isAns = (board, row, col, x, y) => {
     const size = board.length
