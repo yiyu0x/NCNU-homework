@@ -1,6 +1,6 @@
-# NCNU-portfolio
+# NCNU-homework
 
-紀錄自己在大學期間修課的作業。
+All my programming homework at NCNU CSIE.
 
 ## 目錄
 
