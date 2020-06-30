@@ -10,4 +10,4 @@
 - 1072 Microprocessor System（微算機實驗）
 - 1072 UNIX programming
 - 1081 Python Socket programming
-- 1082 Python trojan programming
+- 1082 Python Trojan programming
